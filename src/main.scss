@@ -1,0 +1,14 @@
+@import 'scss/utils/reset';
+
+body {
+  font-family: 'Kalam', cursive;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@import './App.scss';
+@import 'scss/components/inventory';
+@import 'scss/components/ProfilPicture';
+@import 'scss/components/Stats';
+@import 'scss/components/Stuff';
+

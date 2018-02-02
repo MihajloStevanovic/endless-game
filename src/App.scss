@@ -1,0 +1,23 @@
+.App {
+	display: table;
+	width: 960px;
+	height: auto;
+	margin: 20px auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+.nav {
+	float: left;
+	width: 170px;
+}
+.nav a {
+	display: block;
+	line-height: 1.4;
+	color: #333;
+	text-transform: capitalize;
+}
+.content {
+	float: left;
+  width: 748px;
+}
