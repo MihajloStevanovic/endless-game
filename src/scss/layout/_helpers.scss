@@ -1,0 +1,14 @@
+.button {
+	font-family: 'Kalam', cursive;
+	font-size: 1.3rem;
+	background: none;
+	border: 0 none;
+	outline: none;
+	color: #e4ce9a;
+	text-shadow: 1px 1px 6px #000;
+	&:hover {
+		color: #F1F1F1;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}

@@ -5,11 +5,16 @@ class Quests extends Component {
 		super(props)
 		this.state = {
       cd : 60,
-      questOn : false
+      questSelected : false,
+      questOn : undefined
 		}
+    this.onQuestClick = this.onQuestClick.bind(this)
 	}
-	onQuestAccept() {
-		this.setState({questOn : true})
+	onQuestClick(quest) {
+		this.setState({questOn : quest})
+	}
+	onQuestSelect() {
+		this.setState({questSelected : true})
 		this.handleCountDown()
 	}
 	handleCountDown(state) {
@@ -25,13 +30,28 @@ class Quests extends Component {
   render() {
     return (
       <div>
-      	{(this.state.questOn === false) &&
+      	{(this.state.questSelected === false) &&
       	<ul className="quests-list">
-      		<li><button onClick={this.onQuestAccept.bind(this)}>L'antre du dragon</button></li>
-      		<li><button>La tombe du chevalier érant</button></li>
-      		<li><button> La montagne solitaire</button></li>
+      		<li><button className="button" onClick={this.onQuestClick.bind(this, '1')}>L'antre du dragon</button>
+      			{(this.state.questOn === '1') &&
+      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. .</p> }
+      			{(this.state.questOn === '1') &&
+      			<button onClick={this.onQuestSelect.bind(this)}>Lancer la quête</button> }
+      		</li>
+      		<li><button className="button" onClick={this.onQuestClick.bind(this, '2')}>La tombe du chevalier érant</button>
+      			{(this.state.questOn === '2') &&
+      			<p>lorem ipsum...</p> }
+      			{(this.state.questOn === '2') &&
+      			<button onClick={this.onQuestSelect.bind(this)}>Lancer la quête</button> }
+      		</li>
+      		<li><button className="button" onClick={this.onQuestClick.bind(this, '3')}> La montagne solitaire</button>
+      			{(this.state.questOn === '3') &&
+      			<p>lorem ipsum...</p> }
+      			{(this.state.questOn === '3') &&
+      			<button onClick={this.onQuestSelect.bind(this)}>Lancer la quête</button> }
+      		</li>
       	</ul> }
-      	{(this.state.questOn === true) &&
+      	{(this.state.questSelected === true) &&
       	<div className="quest-count-down">Temps restant  { this.state.cd }</div> }
       </div>
     );
