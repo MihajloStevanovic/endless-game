@@ -1,19 +1,22 @@
 .App {
 	display: table;
-	width: 960px;
+	width: 1500px;
 	height: auto;
-	background-color: rgba(62, 62, 62, 0.96);
-	margin: 20px auto;
-	padding: 20px;
-	border: 1px solid #666;
-	box-sizing: border-box;
-}
-/* .app-header {
-	width: 960px;
-	height: 50px;
+	background-color: rgba(62, 62, 62, 0.71);
 	margin: 0 auto;
-  background: #000 url('img/bg/header-bg.jpg');
-} */
+}
+.header {
+	height: 90px;
+	padding-bottom: 140px;
+  	background: url('img/bg/bg-brik.png') center bottom;
+}
+.header-bar {
+	height: 90px;
+	background: -moz-linear-gradient(top, #d0bfab 0%, #a69681 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #d0bfab 0%, #a69681 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #d0bfab 0%, #a69681 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0bfab', endColorstr='#a696814096ee',GradientType=0 ); /* IE6-9 */
+}
 .nav {
 	float: left;
 	width: 170px;
@@ -27,4 +30,15 @@
 .content {
 	float: left;
   width: 748px;
+}
+.guild-members {
+	width: 100%;
+	text-align: left;
+}
+.guild-members tr {
+	border-bottom: 1px solid #999;
+	background-color: rgba(0, 0, 0, 0.15);
+}
+.guild-members th {
+	color: #e4ce9a;
 }

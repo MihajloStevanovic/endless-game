@@ -9,6 +9,9 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <header className="header">
+            <div className="header-bar"></div>
+          </header> 
           <nav className="nav">
             <ul>
               <div>
